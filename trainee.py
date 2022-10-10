@@ -2,6 +2,9 @@ import random
 import os
 import speech_recognition
 import pyttsx3
+import webbrowser
+
+
 
 def mouth():
     print("Answer: ")
@@ -21,6 +24,8 @@ def mind(input):
     if "random" in input:
         str = random.randint(1,100)
         return str(str),1
+    url = 'https://codefather.tech/blog/'
+    webbrowser.open(url)
 
 def RunAsAdmin(path,*args):
 	os.system(r'Powershell -Command "Start-Process "'+path+'"'+ # CMD running Powershell

@@ -38,10 +38,12 @@ while run:
     check=0
     screen.fill(transparency)
     
-    input = ""
+    input = "shutdown"
+    
 
     thought, run = mind(input)
-    print(thought) 
+    print(thought)
+    
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
