@@ -37,13 +37,14 @@ toly = scr_h/3*2
 while run:
     check=0
     screen.fill(transparency)
+    pygame.display.update()
     
-    input = "shutdown"
+    input = ear()
     
-
     thought, run = mind(input)
     print(thought)
-    
+    mouth(thought)
+
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -65,5 +66,5 @@ while run:
                     time.sleep(0.1)
                     check = 1
     
-    pygame.display.update()
-    clock.tick(60)
+    
+    clock.tick(6)
